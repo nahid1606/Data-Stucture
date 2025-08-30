@@ -31,7 +31,7 @@ int main()
      {
          mergearr[n1+i]=arr2[i];
      }
-     for(i=1;i<=n2;i++)
+     for(i=1;i<=n3;i++)
      {
          mergearr[n1+n2+i]=arr3[i];
      }
