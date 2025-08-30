@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int arr[100],i,n,item,tmp,j,found=0;
+    printf("enter a limit:");
+    scanf("%d",&n);
+    printf("enter a value in a array:\n");
+    for(i=1;i<=n;i++)
+    {
+        printf("enter %dth value:",i);
+        scanf("%d",&arr[i]);
+    }
+    printf("enter a value in a array:");
+    scanf("%d",&item);
+    for(i=1;i<=n;i++)
+    {
+        if(arr[i]==item)
+        {
+            printf("item found at index:%d",i);
+            found=1;
+            break;
+
+        }
+
+    }
+    if(found==0)
+    {
+        printf("item not found");
+    }
+}
