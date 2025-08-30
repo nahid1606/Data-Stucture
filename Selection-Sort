@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+    int arr[100],i,n,item,tmp,j,min_index;
+    printf("enter a limit:");
+    scanf("%d",&n);
+    printf("enter a value in a array:\n");
+    for(i=1;i<=n;i++)
+    {
+        printf("enter %dth value:",i);
+        scanf("%d",&arr[i]);
+    }
+    for(i=1;i<=n;i++)
+    {
+        min_index=i;
+        for(j=i+1;j<=n;j++)
+        {
+            if(arr[min_index]>arr[j])
+            {
+                min_index=j;
+            }
+        }
+        tmp=arr[min_index];
+        arr[min_index]=arr[i];
+        arr[i]=tmp;
+    }
+    printf("after sorting array:\n");
+    for(i=1;i<=n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+
+
+}
