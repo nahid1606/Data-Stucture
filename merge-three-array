@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main()
+{
+    int arr1[100],arr2[100],arr3[100],n1,n2,n3,i,j,mergearr[100];
+    printf("enter first limit:");
+    scanf("%d",&n1);
+     printf("enter second limit:");
+    scanf("%d",&n2);
+    printf("enter third limit:");
+    scanf("%d",&n3);
+    printf("enter a first value in a array:\n");
+    for(i=1;i<=n1;i++)
+    {
+        scanf("%d",&arr1[i]);
+    }
+    printf("enter a second value in a array:");
+    for(i=1;i<=n2;i++)
+    {
+        scanf("%d",&arr2[i]);
+    }
+     printf("enter a third value in a array:");
+    for(i=1;i<=n3;i++)
+    {
+        scanf("%d",&arr3[i]);
+    }
+    for(i=1;i<=n1;i++)
+    {
+        mergearr[i]=arr1[i];
+    }
+     for(i=1;i<=n2;i++)
+     {
+         mergearr[n1+i]=arr2[i];
+     }
+     for(i=1;i<=n2;i++)
+     {
+         mergearr[n1+n2+i]=arr3[i];
+     }
+     printf("after merging array:");
+     for(i=1;i<=n1+n2+n3;i++)
+     {
+         printf("%d ",mergearr[i]);
+     }
+
+}
